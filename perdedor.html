@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+    </script>
+
+
+    <title>Winner!</title>
+  </head>
+  <body onload="latencia()">
+    <div class="container">
+      <div class="text-center">
+
+        <div class="row">
+          <div class="col-md-12">
+            <h1 style="font-size:50px">You failed the test. <br> Better try again... </h1>
+
+            <embed src="music/loser.mp3" autostart="true" width="2" height="0"></embed>
+
+          </div>
+          </div>
+
+          <div class="row" style="margin-top:2%">
+            <div class="col-md-12">
+              <div class="" style="height:451px;width:451px;margin-left:auto;margin-right:auto">
+                  <img id="mascotaResultado" src="images/mascota_perdedor.png" alt="winner">
+              </div>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top:6%">
+            <div class="col-md-12">
+
+              <div class="btn-group">
+                <button id="btnGrupoWinner" type="button" name="button" class="btn btn-primary" onclick="location.href = 'niveles.html';">Return to menu</button>
+                <button id="btnGrupoWinner" type="button" name="button" class="btn btn-primary" onclick="goBack()">Try again</button>
+              </div>
+
+
+            </div>
+          </div>
+
+
+
+      </div>
+    </div>
+  </body>
+</html>

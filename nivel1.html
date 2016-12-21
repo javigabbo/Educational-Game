@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="estilos.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <title>EASY</title>
+<script>
+
+var imagen;
+var contenedor;
+var trianguloBien = false;
+var cuadradoBien = false;
+var circuloBien = false;
+var pentagonoBien = false;
+
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+    console.log(ev.target.id);
+    imagen = ev.target.id;
+}
+
+function drop(ev) {
+    console.log(ev.target.id);
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+    contenedor = ev.target.id;
+
+
+    if (contenedor == "div1" && imagen == "img1") {
+      trianguloBien = true;
+    }
+
+    if (contenedor == "div2" && imagen == "img2") {
+      circuloBien = true;
+    }
+
+    if (contenedor == "div3" && imagen == "img3") {
+      cuadradoBien = true;
+    }
+
+    if (contenedor == "div4" && imagen == "img4") {
+      pentagonoBien = true;
+    }
+
+}
+
+
+function corregir(){
+    if (trianguloBien && circuloBien && cuadradoBien && pentagonoBien) {
+      window.location = 'ganador.html';
+    } else {
+      window.location = 'perdedor.html';
+    }
+}
+
+
+
+
+
+</script>
+</head>
+<body>
+
+<div class="container" id="contenedor">
+  <div class="text-center">
+
+  <h1>In this game you have to drag theese 2D geometrical figures and drop them in the box with the correct name</h1>
+
+  <embed src="music/easy.mp3" autostart="true" loop="true"
+  width="2" height="0">
+  </embed>
+
+  <br><br><br>
+
+  <div class="row">
+
+    <div class="col-md-3">
+      <p>Triangle</p>
+      <div id="div1" class="capasDrop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </div>
+
+    <div class="col-md-3">
+      <p>Circle</p>
+      <div id="div2" class="capasDrop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </div>
+
+    <div class="col-md-3">
+      <p>Square</p>
+      <div id="div3" class="capasDrop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </div>
+
+    <div class="col-md-3">
+      <p>Pentagon</p>
+      <div id="div4" class="capasDrop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </div>
+
+
+  </div>
+
+
+
+<br><br><br><br><br><br><br>
+
+<div class="row">
+
+  <div class="col-md-3">
+    <div class="caja" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <img id="img2" src="images/circulo.png" draggable="true" ondragstart="drag(event)" width="40" height="40">
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="caja" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <img id="img3" src="images/cuadrado.jpg" draggable="true" ondragstart="drag(event)" width="40" height="40">
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="caja" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <img id="img4" src="images/pentagono.png" draggable="true" ondragstart="drag(event)" width="40" height="40">
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="caja" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <img id="img1" src="images/triangulo.png" draggable="true" ondragstart="drag(event)" width="40" height="40">
+    </div>
+  </div>
+
+
+
+
+
+
+
+</div>
+
+
+<br><br>
+
+
+  <div class="row">
+    <div class="col-md-10">
+      <input id="btnCorregir" class="btn btn-primary" type="submit" value="CHECK!" onclick="corregir()"/>
+    </div>
+    <div class="col-md-2">
+      <button id="btnVolver" class="btn btn-primary" type="button" name="button" onclick="location.href = 'niveles.html';">Go back</button>
+    </div>
+  </div>
+
+
+
+
+</div>
+
+</div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,237 @@
+
+#contenedor{
+  margin-top: 10px;
+}
+
+
+p{
+  font-size: 20px;
+  font-family: comic sans ms;
+  text-align: center;
+}
+
+h1{
+  font-family: comic sans ms;
+  font-size: 35px;
+}
+
+.capasDrop{
+    width: 80px;
+    height: 80px;
+    padding: 20px;
+    border: 1px solid #aaaaaa;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.caja{
+  width: 80px;
+  height: 80px;
+  padding: 20px;
+  border: 1px dotted #aaaaaa;
+  margin: 0 auto;
+  border-radius: 50px;
+}
+
+
+
+
+@-ms-keyframes spin {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg);
+            background-color:  #3399ff; -webkit-box-shadow: 0 0 9px #b3d9ff;
+    }
+
+    50% { background-color: #0073e6; -webkit-box-shadow: 0 0 18px #66b3ff;
+          background-color: #0073e6; -webkit-box-shadow: 0 0 18px #66b3ff;
+    }
+
+    to { -webkit-transform: rotate(360deg);
+          background-color: #3399ff; -webkit-box-shadow: 0 0 9px #b3d9ff;
+    }
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+
+
+#btnComenzar {
+
+  width: 450px;
+  height: 450px;
+  font-size: 20px;
+  margin-top: 7%;
+  border-radius: 50%;
+
+
+  -webkit-animation-name: spin;
+-webkit-animation-duration: 4000ms;
+-webkit-animation-iteration-count: infinite;
+-webkit-animation-timing-function: linear;
+-moz-animation-name: spin;
+-moz-animation-duration: 4000ms;
+-moz-animation-iteration-count: infinite;
+-moz-animation-timing-function: linear;
+-ms-animation-name: spin;
+-ms-animation-duration: 4000ms;
+-ms-animation-iteration-count: infinite;
+-ms-animation-timing-function: linear;
+
+animation-name: spin;
+animation-duration: 4000ms;
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+transition: 0.6s;
+
+}
+
+#btnComenzar:hover{
+  background-color: #0099cc;
+  border-color: #0099cc;
+  transition: 0.6s;
+}
+
+#btnCorregir{
+  width: 60%;
+  height: 80px;
+  margin-top: 150px;
+  font-size: 30px;
+  font-family: comic sans ms;
+  transition: 0.5s;
+}
+
+#btnCorregir:hover{
+  background-color: #4BAE4F;
+  border-color: #4BAE4F;
+  transition: 0.5s;
+}
+
+#btnVolver{
+
+  height: 80px;
+  margin-top: 150px;
+  font-size: 30px;
+  font-family: comic sans ms;
+  transition: 0.5s;
+}
+
+#btnVolver:hover{
+  background-color: #4BAE4F;
+  border-color: #4BAE4F;
+  transition: 0.5s;
+}
+
+
+#btnEasy{
+  border-radius: 50%;
+  width:200px;
+  height: 200px;
+  font-family: comic sans ms;
+  font-size: 30px;
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+  transition: transform .8s ease-in-out;
+  transition: 1s;
+}
+
+#btnEasy:hover{
+  background-color: #47d147;
+  border-color: #47d147;
+  transition: 1s;
+  transform: rotate(360deg);
+}
+
+
+#btnMedium{
+  border-radius: 50%;
+  width:200px;
+  height: 200px;
+  font-family: comic sans ms;
+  font-size: 30px;
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+  transition: transform .8s ease-in-out;
+  transition: 1s;
+}
+
+#btnMedium:hover{
+  background-color: orange;
+  border-color: orange;
+  transition: 1s;
+  transform: rotate(360deg);
+}
+
+
+#btnHardcore{
+  border-radius: 50%;
+  width:200px;
+  height: 200px;
+  font-family: comic sans ms;
+  font-size: 30px;
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+  transition: transform .8s ease-in-out;
+  transition: 1s;
+}
+
+#btnHardcore:hover{
+  background-color: #ff3333;
+  border-color: #ff3333;
+  transition: 1s;
+  transform: rotate(360deg);
+}
+
+#mascota{
+  height: 400px;
+  width: 350px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#mascotaResultado{
+  margin-right: auto;
+  margin-left: auto;
+  animation-name: latencia;
+  animation-duration:3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+
+@keyframes latencia {
+    from {
+      height: 400px;
+      width: 330px;
+    }
+    50%{
+      height: 450px;
+      width: 360px;
+    }
+    to {
+      height: 400px;
+      width: 330px;
+    }
+}
+
+#btnGrupoWinner{
+  height: 80px;
+  width: 200px;
+  font-size: 20px;
+  font-family: comic sans ms;
+  transition: 1s;
+}
+
+#btnGrupoWinner:hover{
+  background-color: #4BAE4F;
+  border-color: #4BAE4F;
+}

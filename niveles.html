@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Levels</title>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="text-center">
+
+        <h1>Here you can select the levels of difficulty. <br> First try EASY. After that, go to MEDIUM!</h1>
+
+        <embed src="music/menu.mp3" autostart="true" loop="true" style="display:hidden"
+        width="" height="0"></embed>
+
+        <div class="row" style="margin-top:2%">
+          <div class="col-md-12">
+            <img id="mascota" src="images/mascota2.png" alt="pet">
+          </div>
+        </div>
+
+        <div class="row" style="margin-top: 3%">
+
+          <div class="col-md-4">
+            <button id="btnEasy" class="btn btn-primary" type="button" name="button" onclick="location.href = 'nivel1.html';">EASY</button>
+          </div>
+
+          <div class="col-md-4">
+            <button id="btnMedium" class="btn btn-primary" type="button" name="button" onclick="location.href = 'nivel2.html';">MEDIUM</button>
+          </div>
+
+          <div class="col-md-4">
+            <button id="btnHardcore" class="btn btn-primary" type="button" name="button" onclick="location.href = 'nivel3.html';">HARDCORE</button>
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+
+  </body>
+</html>
